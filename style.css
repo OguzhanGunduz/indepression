@@ -1,0 +1,120 @@
+/* main.css */
+
+.box {
+    background-color: #ff66cc; /* Pembe arka plan rengi */
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  @keyframes bounce {
+    0% {
+      font-size: 24px;
+      color: white; /* Başlangıçta beyaz renkte */
+      background-color: #ff66cc; /* Pembe arka plan rengi */
+    }
+    50% {
+      font-size: 48px;
+      color: blue; /* Yarı noktada mavi renge dönüşür */
+      background-color: yellow; /* Yarı noktada sarı arka plan rengine dönüşür */
+    }
+    100% {
+      font-size: 24px;
+      color: white; /* Sonunda tekrar beyaz renge döner */
+      background-color: #ff66cc; /* Pembe arka plan rengi */
+    }
+  }
+  
+  .container {
+    position: relative; /* Konumlandırmayı göreceli olarak ayarla */
+    height: 200px; /* Yüksekliği ayarla */
+    padding-right: 50px; /* Sağ kenara padding ekle */
+  }
+  
+  .volume-bar {
+    position: absolute; /* Konumlandırmayı mutlak olarak ayarla */
+    top: calc(50% - 5px); /* Yükseklik ortasından 5px yukarıda başla */
+    right: 20px; /* Sağ kenarı 20px uzaklıkta olacak şekilde ayarla */
+    width: 300px; /* Genişlik */
+    height: 10px; /* Yükseklik */
+    background-color: #ddd; /* Arka plan rengi */
+    border-radius: 4px; /* Kenar yuvarlatma */
+    overflow: hidden; /* İçeriği taşan kısmı gizle */
+  }
+  
+  .progress {
+    height: 100%; /* İlerleme çubuğunun yüksekliği */
+    width: 0; /* Başlangıçta sıfır genişlik */
+    background-color: #ff66cc; /* İlerleme çubuğunun arka plan rengi */
+    border-radius: 4px; /* Kenar yuvarlatma */
+    transition: width 0.3s ease; /* Genişlik değişimine geçiş efekti ekle */
+  }
+  
+  .handle {
+    position: absolute; /* Konumlandırmayı mutlak olarak ayarla */
+    top: -7px; /* Üst kenarı -7px uzaklıkta */
+    left: 0; /* Sol kenara hizala */
+    transform: translateX(-50%); /* Dikey merkezleme */
+    width: 20px; /* Genişlik */
+    height: 20px; /* Yükseklik */
+    background-color: blue; /* Mavi top rengi */
+    border-radius: 50%; /* Yuvarlak kenar yuvarlatma */
+    cursor: pointer; /* Fare üzerindeyken işaretçiyi değiştir */
+    z-index: 2; /* Diğer içeriğin üzerinde göster */
+  }
+  
+  /* Mobil Uyumlu Stiller */
+  @media (max-width: 768px) {
+    .box {
+      height: 150px;
+      font-size: 18px;
+    }
+  }
+  
+  /* main.css */
+  
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  
+  .left-area {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-200%, -50%);
+    width: 25%;
+    height: 25%; /* İstenilen ölçüde yükseklik */
+  }
+
+  .right-area {
+    position: absolute;
+    top: 38%;
+    right: 50%;
+    transform: translate(200%, -50%);
+    width: 25%;
+    height: 25%;
+  }
+  
+  .center-area {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+  }
+  
