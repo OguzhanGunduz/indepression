@@ -1,7 +1,16 @@
 var audio = new Audio("audio.mp3");
-audio.volume = 0.2; // Ses seviyesini 0.2'ye ayarla
-audio.loop = true; // Döngü içinde çal
-audio.play(); // Ses dosyasını çal
+audio.volume = 0.2; // Set the volume level to 0.2
+audio.loop = true; // Loop the audio
+var isAudioPlaying = false;
+
+function playAudio() {
+  if (!isAudioPlaying) {
+    audio.play();
+    isAudioPlaying = true;
+  }
+}
+
+document.addEventListener("click", playAudio);
 
 var volumeBar = document.querySelector(".volume-bar");
 var progressBar = document.querySelector(".progress");
