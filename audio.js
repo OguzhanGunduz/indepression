@@ -1,5 +1,5 @@
 var audio = new Audio("audio.mp3");
-audio.volume = 0.2; // Set the volume level to 0.2
+audio.volume = 0.1; // Set the volume level to 0.2
 audio.loop = true; // Loop the audio
 var isAudioPlaying = false;
 
